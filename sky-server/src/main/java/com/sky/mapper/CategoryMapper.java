@@ -19,4 +19,10 @@ public interface CategoryMapper {
      * @return
      */
     Page<Category> pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
+
+    /**
+     * 根据主键动态修改属性
+     * @param category
+     */
+    void update(Category category);
 }
