@@ -2,6 +2,7 @@ package com.sky.controller.admin;
 
 import com.sky.dto.CategoryDTO;
 import com.sky.dto.CategoryPageQueryDTO;
+import com.sky.entity.Category;
 import com.sky.result.PageResult;
 import com.sky.result.Result;
 import com.sky.service.CategoryService;
@@ -67,7 +68,7 @@ public class CategoryController {
      */
     @DeleteMapping
     @ApiOperation("根据id删除分类")
-    public Result delect(Long id) {
+    public Result delectById(Long id) {
         log.info("根据id删除分类：{}", id);
         categoryService.deleteById(id);
         return Result.success();
