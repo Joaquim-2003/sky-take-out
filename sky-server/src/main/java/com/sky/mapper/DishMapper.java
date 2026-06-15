@@ -1,4 +1,13 @@
 package com.sky.mapper;
 
+import org.apache.ibatis.annotations.Select;
+
 public interface DishMapper {
+    /**
+     * 根据id查询菜品数量
+     * @param id
+     * @return
+     */
+    @Select("select count(id) from dish where category_id = #{categoryId}")
+    Integer countByCategoryId(Long id);
 }
